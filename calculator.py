@@ -4,9 +4,12 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+def multiply(a, b):
+    return a * b
+
 if __name__ == "__main__":
     try:
-        operation = input("Enter operation (+ or -): ")
+        operation = input("Enter operation (+, -, *): ")
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
         
@@ -16,7 +19,10 @@ if __name__ == "__main__":
         elif operation == '-':
             result = subtract(num1, num2)
             print(f"The result of subtracting {num2} from {num1} is {result}")
+        elif operation == '*':
+            result = multiply(num1, num2)
+            print(f"The result of multiplying {num1} and {num2} is {result}")
         else:
-            print("Invalid operation. Please enter + or -.")
+            print("Invalid operation. Please enter +, -, or *.")
     except ValueError:
         print("Invalid input. Please enter numeric values.")
